@@ -14,4 +14,4 @@ city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 def home():
     return render_template('home.html', city_names=city_names, name=name)
 
-myapp_obj.run()
+#myapp_obj.run()

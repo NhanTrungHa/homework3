@@ -16,12 +16,12 @@ def home():
     return '''
     <html>
     <head>
-        <h1>Welcome ''' + name + ''' </h1>
+        <h1>Welcome,''' + name + '''!</h1>
     </head>
     <body>
         
 
-        <a href="https://www.google.com">not google</a>
+        <a href="www.google.com">not google</a>
 
         <ul>
             <li> '''+ city_names[0]+'''</li>
@@ -33,4 +33,4 @@ def home():
     </html>'''
 
 
-#myapp_obj.run()
+myapp_obj.run()

@@ -15,4 +15,11 @@ city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 def home():
     return render_template('home.html', city_names=city_names, name=name)
 
+@myobj.route("/", methods=["POST"])
+def handle_data():
+    form = request.form
+    city = request.form.get("cityname")
+    flash(city)
+    return render_template('home.html', city_names=city_names, name=name, form=form)
+
 #myobj.run()

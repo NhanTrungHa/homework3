@@ -5,8 +5,6 @@ from flask import Flask, render_template, flash, redirect, request
 # __name__ is a predefined setup variable
 myobj = Flask(__name__)
 
-myobj.config['SECRET KEY'] = 'secrfgdgret'
-
 name = 'Nhan'
 city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 
@@ -16,13 +14,6 @@ city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 # called view function
 def home():
     return render_template('home.html', city_names=city_names, name=name)
-
-
-@myobj.route("/", methods=["POST"])
-def handle_data():
-    form = request.form
-    flash(form["cityname"])
-    return render_template('home.html', city_names=city_names, name=name, form=form)
 
 
 #myobj.run()

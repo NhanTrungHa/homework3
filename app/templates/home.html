@@ -13,10 +13,23 @@
             {% endfor %}
          </ul>
 
-        <p>City Name</p>
-        <input type="text" maxlength="32">
-        <br><br>
-        <button type="button">Submit</button>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+
+        {% block body %}
+            <p>city name</p>
+            <input type="text" maxlength="32" name="nm"/>
+            <br><br>
+            <input type="submit" value="submit"/>
+        {% endblock %}
 
     </body>
 </html>

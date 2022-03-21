@@ -4,7 +4,18 @@
 
     </head>
     <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
     <h1>Welcome {{name}}</h1>
+
         <a href="www.google.com">not google</a>
 
         <ul>
@@ -25,10 +36,11 @@
 
 
         {% block body %}
-            <p>city name</p>
-            <input type="text" maxlength="32" name="nm"/>
-            <br><br>
-            <input type="submit" value="submit"/>
+            <form action="/login" method = "POST">
+               <p>City Names</p>
+                <input type = "text" maxlength="32" name="cityname" />
+               <p><input type = "submit" value = "Submit" /></p>
+            </form>
         {% endblock %}
 
     </body>

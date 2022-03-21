@@ -8,10 +8,29 @@ myapp_obj = Flask(__name__)
 name = 'Nhan'
 city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 
+
 # different URL the app will implement
 @myapp_obj.route("/")
 # called view function
 def home():
-    return render_template('home.html', city_names=city_names, name=name)
+    return '''
+    <html>
+    <head>
+        <title>Home Page - my blog</title>
+    </head>
+    <body>
+        <h1>Welcome ''' + name + ''' </h1>
+
+        <a href="https://www.google.com">not google</a>
+
+        <ul>
+            <li> '''+ city_names[0]+'''</li>
+            <li> '''+ city_names[1]+'''</li>
+            <li> '''+ city_names[2]+'''</li>
+            
+         </ul>
+    </body>
+    </html>'''
+
 
 #myapp_obj.run()

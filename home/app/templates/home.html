@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page - my blog</title>
+    </head>
+    <body>
+        <h1>Welcome {{name }}</h1>
+
+        <a href="https://www.google.com">not google</a>
+
+        <ul>
+            {% for city in city_names %}
+              <li>{{city}}</li>
+            {% endfor %}
+         </ul>
+
+        <p>City Name</p>
+        <input type="text" maxlength="32">
+        <br><br>
+        <button type="button">Submit</button>
+    </body>
+</html>

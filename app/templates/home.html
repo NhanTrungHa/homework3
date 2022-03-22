@@ -1,11 +1,7 @@
 <!DOCTYPE html PUBLIC>
 <html lang="en">
     <head>
-
-    </head>
-    <body>
-
-        {% with messages = get_flashed_messages() %}
+{% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
             {% for message in messages %}
@@ -19,6 +15,10 @@
 
 
         <a href="www.google.com">not google</a>
+    </head>
+    <body>
+
+
 
         <ul>
             {% for city in city_names %}

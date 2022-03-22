@@ -5,7 +5,7 @@
     </head>
     <body>
 
-    {% with messages = get_flashed_messages() %}
+        {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
             {% for message in messages %}
@@ -31,5 +31,6 @@
             <input id="textinput" type = "text" maxlength="32" name="cityname" />
            <p><input type = "submit" value = "Submit" /></p>
         </form>
+
     </body>
 </html>

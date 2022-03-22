@@ -1,9 +1,6 @@
 # include Flask class from file flask
 from flask import Flask, render_template, flash, redirect, request
-
-# create an instance of Flask class
-# __name__ is a predefined setup variable
-myobj = Flask(__name__)
+from app import myobj
 
 name = 'Nhan'
 city_names = ['San Jose', 'Los Angeles', 'Tokyo']

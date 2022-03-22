@@ -26,7 +26,8 @@ def home():
 def handle_data():
     form = request.form
     city = request.form.get("cityname")
-    flash(city)
+    if form.validate_on_submit():
+        flash(city)
     return render_template('home.html', city_names=city_names, name=name, form=form)
 
 #myobj.run()

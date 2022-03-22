@@ -13,7 +13,6 @@ myobj.config.from_mapping(
 )
 
 myobj.config['SECRET_KEY'] = 'you - will - never - guess'
-myobj.secret_key
 
 
 # different URL the app will implement
@@ -27,4 +26,4 @@ def home():
     return render_template('home.html', city_names=city_names, name=name)
 
 
-#myobj.run()
+myobj.run()

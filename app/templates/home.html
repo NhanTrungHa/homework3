@@ -4,7 +4,7 @@
 
     </head>
     <body>
-    <h1>Welcome {{name}}</h1>
+    <h1>Welcome, {{name}}!</h1>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -16,7 +16,7 @@
         {% endif %}
         {% endwith %}
 
-        <a href="www.google.com">not google</a>
+        <a href="https://www.google.com">not google</a>
 
         <ul>
             {% for city in city_names %}

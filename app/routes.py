@@ -15,18 +15,16 @@ myobj.config.from_mapping(
 myobj.config['SECRET_KEY'] = 'you - will - never - guess'
 myobj.secret_key
 
+
 # different URL the app will implement
-@myobj.route("/")
+@myobj.route("/", methods=['GET', 'POST', 'PUT'])
 # called view function
 def home():
+    form = request.form
+    if request.form.get("cityname") is not None:
+        city = request.form.get("cityname")
+        flash(city)
     return render_template('home.html', city_names=city_names, name=name)
 
 
-@myobj.route("/", methods=["POST"])
-def handle_data():
-    form = request.form
-    city = request.form.get("cityname")
-    flash(city)
-    return render_template('home.html', city_names=city_names, name=name, form=form)
-
-#myobj.run()
+myobj.run()

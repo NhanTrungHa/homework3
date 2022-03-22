@@ -15,10 +15,10 @@
         {% endif %}
         {% endwith %}
 
-    <h1>Welcome, {{name}}!</h1>
+        <h1>Welcome {{name}}</h1>
 
 
-        <a href="https://www.google.com">not google</a>
+        <a href="www.google.com">not google</a>
 
         <ul>
             {% for city in city_names %}
@@ -27,8 +27,8 @@
          </ul>
 
         <form action="" method="POST">
-           <p>City Names</p>
-            <input type = "text" maxlength="32" name="cityname" />
+            <label for="textinput">City Name</label><br>
+            <input id="textinput" type = "text" maxlength="32" name="cityname" />
            <p><input type = "submit" value = "Submit" /></p>
         </form>
     </body>

@@ -29,4 +29,4 @@ def handle_data():
     flash(city)
     return render_template('home.html', city_names=city_names, name=name, form=form)
 
-#myobj.run()
+myobj.run()

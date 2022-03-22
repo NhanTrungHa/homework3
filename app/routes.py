@@ -8,6 +8,12 @@ myobj = Flask(__name__)
 name = 'Nhan'
 city_names = ['San Jose', 'Los Angeles', 'Tokyo']
 
+myobj.config.from_mapping(
+    SECRET_KEY='you - will - never - guess'
+)
+
+myobj.config['SECRET_KEY'] = 'you - will - never - guess'
+myobj.secret_key
 
 # different URL the app will implement
 @myobj.route("/")
@@ -23,4 +29,4 @@ def handle_data():
     flash(city)
     return render_template('home.html', city_names=city_names, name=name, form=form)
 
-myobj.run()
+#myobj.run()

@@ -7,5 +7,5 @@ myobj.config.from_mapping(
 )
 
 myobj.config['SECRET_KEY'] = 'you - will - never - guess'
-myobj.secret_key = 'you - will - never - guess'
+myobj.secret_key
 from app import routes

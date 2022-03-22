@@ -16,10 +16,10 @@ def home():
     return '''
     <html>
     <head>
-        <h1>Welcome,''' + name + '''!</h1>
+        
     </head>
     <body>
-        
+        <h1>Welcome''' + name + '''!</h1>
 
         <a href="www.google.com">not google</a>
 
